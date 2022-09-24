@@ -82,8 +82,4 @@ dependencies {
     kapt Dependencies.hilt_compiler
     kapt Dependencies.hilt_android_compiler
     implementation Dependencies.hilt_lifecycle_viewmodel
-
-
-
-
 }
