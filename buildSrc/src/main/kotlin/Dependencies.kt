@@ -30,6 +30,7 @@ object Versions {
     const val hilt_compiler = "1.0.0"
     const val hilt_android_compiler = "2.38.1"
     const val hilt_lifecycle_viewmodel = "1.0.0-alpha03"
+    const val hilt_navigation_compose = "1.0.0"
     // retrofit
     const val retrofit = "2.9.0"
     const val converter_gson = "2.9.0"
@@ -57,10 +58,14 @@ object Dependencies {
     val kotlinx_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinx_coroutines_android}"
     val lifecycle_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_viewmodel_ktx}"
     val coroutine_lifecycle_runtime_ktx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.coroutine_lifecycle_runtime_ktx}"
+
     val hilt_android = "com.google.dagger:hilt-android:${Versions.hilt_android}"
     val hilt_compiler = "androidx.hilt:hilt-compiler:${Versions.hilt_compiler}"
     val hilt_android_compiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt_android_compiler}"
     val hilt_lifecycle_viewmodel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hilt_lifecycle_viewmodel}"
+    val hilt_navigation_compose = "androidx.hilt:hilt-navigation-compose:${Versions.hilt_navigation_compose}"
+
+
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val converter_gson = "com.squareup.retrofit2:converter-gson:${Versions.converter_gson}"
     val okhttp3 = "com.squareup.okhttp3:okhttp:${Versions.okhttp3}"
