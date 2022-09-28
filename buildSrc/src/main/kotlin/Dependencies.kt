@@ -70,7 +70,7 @@ object Dependencies {
     val converter_gson = "com.squareup.retrofit2:converter-gson:${Versions.converter_gson}"
     val okhttp3 = "com.squareup.okhttp3:okhttp:${Versions.okhttp3}"
     val logging_interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.logging_interceptor}"
-    val material = "om.google.android.material:material:${Versions.material}"
+    val material = "com.google.android.material:material:${Versions.material}"
     val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
 }
 object Modules {
