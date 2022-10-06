@@ -15,6 +15,13 @@ object Versions {
     const val junit = "4.13.2"
     const val androidx_test_ext = "1.1.3"
     const val test_espresso = "3.4.0"
+    const val test_core = "1.3.0"
+    const val core_testing = "2.1.0"
+    const val coroutines_test = "1.6.4"
+    const val truth = "1.0.1"
+    const val turbine = "0.9.0"
+    const val mockwebserver = "4.10.0"
+
     const val appcompat = "1.5.0"
     const val lifecycle_viewmodel_compose = "1.0.0-alpha07"
     // navigation
@@ -46,10 +53,18 @@ object Dependencies {
     val ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose_version}"
     val lifecycle_runtime_ktx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle_runtime_ktx}"
     val activity_compose = "androidx.activity:activity-compose:${Versions.activity_compose}"
+    // tests
     val junit = "junit:junit:${Versions.junit}"
     val androidx_test_ext = "androidx.test.ext:junit:${Versions.androidx_test_ext}"
     val test_espresso = "androidx.test.espresso:espresso-core:${Versions.test_espresso}"
     val ui_test_junit4 = "androidx.test.espresso:espresso-core:${Versions.compose_version}"
+    val test_core = "androidx.test:core:${Versions.test_core}"
+    val core_testing = "androidx.arch.core:core-testing:${Versions.core_testing}"
+    val coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines_test}"
+    val truth = "com.google.truth:truth:${Versions.truth}"
+    val turbine = "app.cash.turbine:turbine:${Versions.turbine}"
+    val mockwebserver = "com.squareup.okhttp3:mockwebserver:${Versions.mockwebserver}"
+    //
     val ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.compose_version}"
     val lifecycle_viewmodel_compose = "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.lifecycle_viewmodel_compose}"
     val navigation_compose = "androidx.navigation:navigation-compose:${Versions.navigation_compose}"
