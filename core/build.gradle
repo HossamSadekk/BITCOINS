@@ -35,9 +35,7 @@ dependencies {
 
     implementation Dependencies.androidx_core
     implementation Dependencies.appcompat
-    testImplementation Dependencies.junit
-    androidTestImplementation Dependencies.androidx_test_ext
-    androidTestImplementation Dependencies.test_espresso
+
 
     // Retrofit
     implementation Dependencies.retrofit
@@ -54,4 +52,17 @@ dependencies {
     // Coroutines
     implementation Dependencies.kotlinx_coroutines_core
     implementation Dependencies.kotlinx_coroutines_android
+
+    // Testing
+    // local tests
+    testImplementation Dependencies.junit
+    testImplementation Dependencies.test_core
+    testImplementation Dependencies.core_testing
+    testImplementation Dependencies.coroutines_test
+    testImplementation Dependencies.truth
+    testImplementation Dependencies.turbine
+    testImplementation Dependencies.mockwebserver
+    // instrumented unit tests
+    androidTestImplementation Dependencies.androidx_test_ext
+    androidTestImplementation Dependencies.test_espresso
 }
