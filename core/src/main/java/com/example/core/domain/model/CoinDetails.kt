@@ -3,12 +3,12 @@ package com.example.core.domain.model
 import com.example.core.data.remote.dto.Team
 
 data class CoinDetails(
-    val coinId: String,
-    val name: String,
-    val description: String,
-    val symbol: String,
-    val rank: Int,
-    val isActive: Boolean,
-    val tags: List<String>,
-    val team: List<Team>
+    val coinId: String?=null,
+    val name: String?=null,
+    val description: String?=null,
+    val symbol: String?=null,
+    val rank: Int?=null,
+    val isActive: Boolean?=null,
+    val tags: List<String>?=null,
+    val team: List<Team>?=null
 )

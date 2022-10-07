@@ -45,8 +45,8 @@ fun CoinDetailsScreen(
                         )
 
                         Text(
-                            text = if (state.coin.isActive) "Active" else "Inactive",
-                            color = if (state.coin.isActive) Color.Green else Color.Red,
+                            text = if (state.coin.isActive == true) "Active" else "Inactive",
+                            color = if (state.coin.isActive == true) Color.Green else Color.Red,
                             modifier = Modifier.weight(2f),
                             fontStyle = FontStyle.Italic,
                             textAlign = TextAlign.End
@@ -56,7 +56,7 @@ fun CoinDetailsScreen(
                     Spacer(modifier = Modifier.height(15.dp))
 
                     Text(
-                        text = state.coin.description,
+                        text = state.coin.description ?: "",
                         style = MaterialTheme.typography.h2,
                     )
 
@@ -74,7 +74,7 @@ fun CoinDetailsScreen(
                         crossAxisSpacing = 10.dp,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        state.coin.tags.forEach { tags ->
+                        state.coin.tags?.forEach { tags ->
                             CoinTag(tag = tags)
                         }
                     }
@@ -85,7 +85,7 @@ fun CoinDetailsScreen(
                         style = MaterialTheme.typography.h3,
                     )
                 }
-                items(state.coin.team){ team ->
+                items(state.coin.team.orEmpty()){ team ->
                     TeamListItem(team, modifier = Modifier.fillMaxWidth().padding(10.dp))
                     Divider()
                 }
