@@ -15,6 +15,10 @@ class FakeCoinRepositoryImplTest : CoinRepository{
     val coinDto1 = CoinDto("2",false,true,"PlusPit",2,"@","COIN")
     val coinDto2 = CoinDto("3",true,false,"BitPound",2,"!","COIN")
     private val coinList : List<CoinDto> = listOf(coinDto,coinDto1,coinDto2)
+    val coinDetails1 = CoinDetailsDto(id = "1", name = null, description = "dummy", is_active = true, symbol = "@", rank = 2)
+    val coinDetails2 = CoinDetailsDto(id = "2", name = null, description = "dummy", is_active = true, symbol = "@", rank = 2)
+    val coinDetails3 = CoinDetailsDto(id = "3", name = null, description = "dummy", is_active = true, symbol = "@", rank = 2)
+    private val coinDetails: List<CoinDetailsDto> = listOf(coinDetails1,coinDetails2,coinDetails3)
 
     private var shouldReturnError = false
     fun setShouldReturnError(value: Boolean){
@@ -28,7 +32,12 @@ class FakeCoinRepositoryImplTest : CoinRepository{
     }
 
     override suspend fun getCoinById(coinId: String): CoinDetailsDto {
-        TODO("Not yet implemented")
+        if(shouldReturnError){
+            throw HttpException(Response.error<ResponseBody>(500 ,ResponseBody.create("plain/text".toMediaTypeOrNull(),"some content")))
+        }
+        return coinDetails.single {
+            it.id == coinId
+        }
     }
 
 
